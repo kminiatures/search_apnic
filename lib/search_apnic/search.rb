@@ -87,7 +87,7 @@ module SearchApnic
         @records ||= []
         number_of_ip = record[:value].to_i
         start = record[:start]
-        mask = 33 - ("%b" % number_of_ip).length + 1
+        mask = 32 - ("%b" % number_of_ip).length + 1
         ip = "#{start}/#{mask}"
 
         @records << ip

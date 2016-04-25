@@ -22,7 +22,50 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Dump
+
+```
+search_apnic -c 'JP' --dump
+```
+
+👇🏼
+
+```
+1.0.16.0/21
+1.0.64.0/19
+1.1.64.0/19
+1.5.0.0/17
+1.21.0.0/17
+1.33.0.0/17
+1.66.0.0/16
+......
+```
+
+### Seach
+
+
+#### Found.
+
+```
+search_apnic -c 'JP' -i '1.0.16.10'
+```
+
+👇🏼
+
+```
+1.0.16.0/21
+```
+
+#### Not Found.
+
+```
+ search_apnic -c 'JP' -i '1.0.116.0'
+```
+👇🏼
+```
+ Not Match
+```
+
 
 ## Development
 

@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+# vim: ft=ruby
+require 'search_apnic'
+require 'optparse'
+opt = OptionParser.new
+@opts = {
+  dump: false,
+  ipaddr: nil,
+  country: nil
+}
+opt.on('-c country', '--country=Serach-Country') {|v| @opts[:country] = v}
+opt.on('-i ipaddr', '--ipaddr=IP-Address', 'Search addr in Country'){|v| @opts[:ipaddr] = v}
+opt.on('-D', '--dump', 'Dump all IP Adrress') {|v| @opts[:dump] = true }
+opt.parse!(ARGV)
+
+unless @opts[:country]
+  puts "Nothing Country. `search_apnic -c JP -i 192.168.1.1`"
+  puts "Choose #{SearchApnic::Search.countries.join(" ")}"
+  exit 1
+end
+
+by_country = SearchApnic::Search.new.by_country(@opts[:country])
+
+if @opts[:dump]
+  by_country.print
+  exit 1
+end
+
+if @opts[:ipaddr]
+  if ip_and_mask = by_country.include?(@opts[:ipaddr])
+    puts ip_and_mask
+    exit 0
+  else
+    puts 'Not Match'
+    exit 1
+  end
+end
+

@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "search_apnic"
   spec.version       = SearchApnic::VERSION
   spec.authors       = ["hiroshi kobayashi"]
-  spec.email         = ["kobayashi@ans-web.co.jp"]
+  spec.email         = ["koba.shipbuilding@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{Dump or Search IP Adress from APNIC.}
+  spec.description   = %q{APNIC }
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
@@ -33,4 +33,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest", "~> 5.0"
   spec.add_development_dependency "guard"
   spec.add_development_dependency "guard-minitest"
+  spec.add_development_dependency "awesome_print"
 end

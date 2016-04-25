@@ -1,4 +1,5 @@
 require "search_apnic/version"
+require "search_apnic/file"
 require "search_apnic/search"
 
 module SearchApnic

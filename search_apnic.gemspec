@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["hiroshi kobayashi"]
   spec.email         = ["koba.shipbuilding@gmail.com"]
 
-  spec.summary       = %q{Dump or Search IP Adress from APNIC.}
-  spec.description   = %q{APNIC }
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Search IP Adress by country from APNIC.}
+  spec.description   = %q{Dump or Search IP Adress from APNIC.}
+  spec.homepage      = "https://github.com/kminiatures/search_apnic"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -29,7 +29,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "minitest", "~> 5.0"
   spec.add_development_dependency "minitest", "~> 5.0"
   spec.add_development_dependency "guard"
   spec.add_development_dependency "guard-minitest"
